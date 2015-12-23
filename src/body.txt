@@ -1,0 +1,40 @@
+--2676ff6efebdb664f8f7ccb34f864e25
+Content-Type: application/json; charset=UTF-8
+Content-ID: body
+
+{
+  "archiveReference": {
+    "name": "DDC_india01"
+  },
+  "index": {
+    "STRING_100": {
+      "type": "STRING",
+      "propertyValue": "mystring"
+    },
+    "INTEGERFIELD": {
+      "type": "INTEGER",
+      "propertyValue": 42
+    }
+  },
+  "structure": {
+    "element_type": "structure",
+    "children": [
+      {
+        "element_type": "file",
+        "fileName": "textfile.txt",
+        "content": {
+          "type": "multipart_reference",
+          "uri": "cid:textfile"
+        }
+      }
+    ]
+  }
+}
+
+--2676ff6efebdb664f8f7ccb34f864e25
+Content-Type: text/plain
+Content-ID: <textfile>
+
+this is the content of my textfile 
+
+--2676ff6efebdb664f8f7ccb34f864e25
