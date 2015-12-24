@@ -19,7 +19,7 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import com.microsoft.azure.storage.file.FileInputStream;
 
 @SuppressWarnings("deprecation")
-public class RestClient {
+public class GetFileFromSaperionECM {
 
  public static void main(String[] args) throws ClientProtocolException, IOException 
  {
@@ -29,17 +29,17 @@ public class RestClient {
   @SuppressWarnings("resource")
   HttpClient client = new DefaultHttpClient();
 
-  HttpPost request =  new HttpPost("https://ecm-service.psft.co/ecms/documents"); //new HttpGet('http://restUrl');
+  HttpGet request =  new HttpGet("https://ecm-service.psft.co/ecms/documents/ew0KICAiZGRjTmFtZSIgOiAiRERDX2luZGlhMDEiLA0KICAic3lzUm93SWQiIDogIkMxREZBREY1NzUxMEYwNDQ4OTVBMzg0Nzg1RjA1NEYwMDAwMDAwMDAwMDAwIg0KfQ%253D%253D"); //new HttpGet('http://restUrl');
   String authString = userName + ":" + password;
   byte[] authEncBytes = Base64.encodeBase64(authString.getBytes());
   String authStringEnc = new String(authEncBytes);
 
   
   request.addHeader("Authorization", "Basic "+authStringEnc);
-  request.addHeader("Accept", "application/json");
+  request.addHeader("Accept", "multipart/related");
   request.addHeader("saTenant", "india");
   request.addHeader("saLicense", "1");
-  request.addHeader("Content-Type", "Multipart/Related; boundary=2676ff6efebdb664f8f7ccb34f864e25");
+  //request.addHeader("Content-Type", "Multipart/Related; boundary=2676ff6efebdb664f8f7ccb34f864e25");
   //http://32872a3343874da6a818792a8e3a8399.cloudapp.net/InnovationProject/rest/patients/ID310/blooddoc/210
   
  /* String body = "";
@@ -64,6 +64,8 @@ public class RestClient {
   
  
   HttpResponse response = client.execute(request);
+  
+  response.
 
   BufferedReader rd = new BufferedReader (new InputStreamReader(response.getEntity().getContent()));
 
