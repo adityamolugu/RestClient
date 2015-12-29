@@ -1,5 +1,7 @@
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -156,6 +158,25 @@ public class GetFileFromSaperionECM {
   }*/
 
  }
+ 
+ public static void decodedBase64(String ecodedString)
+	{
+	//	File file = new File();
+		byte[] data = Base64.decodeBase64(ecodedString);
+		try (OutputStream stream = new FileOutputStream("C:/Users/Aditya.Molugu/Desktop/abc.PNG")) {
+		    stream.write(data);
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} 
+		//return null;
+		
+		
+		
+	}
 
 }
 
