@@ -19,22 +19,29 @@ public class SetRequest {
 		setECMRequest();
 	}
 	
-	public static Request setECMRequest()
+	public static String setECMRequest()
 	{
 		Request request = new Request();
 		ArchiveReference archiveReference = new ArchiveReference();
 		archiveReference.setName("DDC_india01");
 		request.setArchiveReference(archiveReference);
 		
-		Index index = new Index();
+		//Index index = new Index();
 		Properties properties = new Properties();
-		properties.setPropertyValue("textFile");
+		properties.setPropertyValue("MyString");
 		properties.setType("STRING");
+		
+		Properties propertiesInt = new Properties();
+		propertiesInt.setType("INTEGER");
+		propertiesInt.setPropertyValue(new Integer(42));
 		
 		Map map = new HashMap<String,Object>();
 		map.put("STRING_100", properties);
-		index.setIndex(map);
-		request.setIndex(index);
+		map.put("INTEGERFIELD", propertiesInt);
+		//index.setIndex(map);
+		//index.setIndexName("STRING_100");
+		//index.setProperties(properties);
+		request.setIndex(map);
 		
 		Structure structure = new Structure();
 		structure.setElement_type("structure");
@@ -42,10 +49,10 @@ public class SetRequest {
 		children[0] = new Children();
 		Content content = new Content();
 		content.setType("multipart_reference");
-		content.setUri("cid:textfile");
+		content.setUri("cid:imagefile");
 		
 		children[0].setElement_type("file");
-		children[0].setFileName("textfile.txt");
+		children[0].setFileName("base64.png");
 		children[0].setContent(content);
 		
 		structure.setChildren(children);
@@ -56,7 +63,7 @@ public class SetRequest {
 		
 		System.err.println("JsonString is: "+jsonString);
 		
-		return request;
+		return jsonString;
 	}
 
 }

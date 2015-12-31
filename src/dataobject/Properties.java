@@ -10,7 +10,7 @@ package dataobject;
 public class Properties {
 
 	private String type;
-	private String propertyValue;
+	private Object propertyValue;
 	/**
 	 * @return the type
 	 */
@@ -26,13 +26,13 @@ public class Properties {
 	/**
 	 * @return the propertyValue
 	 */
-	public String getPropertyValue() {
+	public Object getPropertyValue() {
 		return propertyValue;
 	}
 	/**
 	 * @param propertyValue the propertyValue to set
 	 */
-	public void setPropertyValue(String propertyValue) {
+	public void setPropertyValue(Object propertyValue) {
 		this.propertyValue = propertyValue;
 	}
 	

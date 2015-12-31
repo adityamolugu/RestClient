@@ -26,5 +26,40 @@ public class Index {
 	public void setIndex(Map<String, Properties> index) {
 		this.index = index;
 	}
+	
+	/*String STRING_100;
+	
+	Properties properties;
+
+	*//**
+	 * @return the indexName
+	 *//*
+	public String getIndexName() {
+		return indexName;
+	}
+
+	*//**
+	 * @param indexName the indexName to set
+	 *//*
+	public void setIndexName(String indexName) {
+		this.indexName = indexName;
+	}
+
+	*//**
+	 * @return the properties
+	 *//*
+	public Properties getProperties() {
+		return properties;
+	}
+
+	*//**
+	 * @param properties the properties to set
+	 *//*
+	public void setProperties(Properties properties) {
+		this.properties = properties;
+	}
+	*/
+	
+	
 
 }

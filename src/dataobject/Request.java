@@ -3,6 +3,8 @@
  */
 package dataobject;
 
+import java.util.Map;
+
 /**
  * @author Aditya.Molugu
  *
@@ -10,7 +12,7 @@ package dataobject;
 public class Request {
 	
 	ArchiveReference archiveReference;
-	Index index;
+	Map<String,Object> index;
 	Structure structure;
 	/**
 	 * @return the archiveReference
@@ -26,21 +28,33 @@ public class Request {
 	}
 	/**
 	 * @return the index
-	 */
+	 *//*
 	public Index getIndex() {
 		return index;
 	}
-	/**
+	*//**
 	 * @param index the index to set
-	 */
+	 *//*
 	public void setIndex(Index index) {
 		this.index = index;
-	}
+	}*/
 	/**
 	 * @return the structure
 	 */
 	public Structure getStructure() {
 		return structure;
+	}
+	/**
+	 * @return the index
+	 */
+	public Map<String, Object> getIndex() {
+		return index;
+	}
+	/**
+	 * @param index the index to set
+	 */
+	public void setIndex(Map<String, Object> index) {
+		this.index = index;
 	}
 	/**
 	 * @param structure the structure to set
