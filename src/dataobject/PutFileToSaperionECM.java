@@ -63,9 +63,9 @@ public class PutFileToSaperionECM {
 			HttpResponse response = getResponseFromECMService(base64FileString,fileName);
 			//String json = EntityUtils.toString(response.getEntity());
 			//String json = new String(response.getEntity().getContent(),"UTF-8");
-			Gson gson = new Gson();
 			if (response.getStatusLine().getStatusCode() == 200)
 			{
+				Gson gson = new Gson();
 				Reader reader = new InputStreamReader(response.getEntity().getContent());
 				Response responseObj = gson.fromJson(reader, Response.class);
 				
@@ -99,7 +99,7 @@ public class PutFileToSaperionECM {
 		fileBuilder.append(base64FileString);
 		StringBody fileBody = new StringBody(fileBuilder.toString(),ContentType.TEXT_PLAIN);
 		
-		FormBodyPart fileBodyPart = new FormBodyPart("filePart",fileBody);
+		FormBodyPart fileBodyPart = new FormBodyPart("filePart", fileBody);
 		fileBodyPart.addField("Content-Type", "image/png");
 		fileBodyPart.addField("Content-ID", "<imagefile>");
 		
@@ -112,7 +112,7 @@ public class PutFileToSaperionECM {
 		/*ByteArrayOutputStream out = new ByteArrayOutputStream();
 		multipartBuilder.build().writeTo(out);
 		out.close();
-		String s = out.toString("UTF-8");1
+		String s = out.toString("UTF-8");
 		System.err.println("output IS "+s);*/
 		
 		HttpEntity entity = multipartBuilder.build();
@@ -205,6 +205,8 @@ public class PutFileToSaperionECM {
 		
 		return jsonString;
 	}
+	
+	
 	
 	
 	

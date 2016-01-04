@@ -1,4 +1,4 @@
-//package com.kofax.client;
+/*//package com.kofax.client;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -79,12 +79,12 @@ public class PWClient {
 			
 			System.out.println(responseData);
 			
-		  /*JSONArray jsonArray = new JSONArray(responseData);
+		  JSONArray jsonArray = new JSONArray(responseData);
 		 
             for (int i = 0; i < jsonArray.length(); i++) {
                 JSONObject jsonObject = jsonArray.getJSONObject(i);
                 System.out.println(jsonObject);
-            }  */
+            }  
 			Gson gson = new Gson();
 			String str =  gson.toJson(responseData);
 			
@@ -106,10 +106,11 @@ public class PWClient {
 
 		} catch (IOException e) {
 			e.printStackTrace();
-		} /*catch (JSONException e) {
+		} catch (JSONException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}*/
+		}
 	}
 
 }
+*/

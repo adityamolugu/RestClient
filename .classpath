@@ -1,52 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
-	<classpathentry kind="lib" path="C:/Users/Aditya.Molugu/Downloads/PackageForAzureLibrariesForJava/httpcore-4.3.2.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Aditya.Molugu/Downloads/PackageForAzureLibrariesForJava/httpclient-4.3.5.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Aditya.Molugu/Downloads/commons-logging-1.2-bin/commons-logging-1.2/commons-logging-1.2.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Aditya.Molugu/Downloads/commons-logging-1.2-bin/commons-logging-1.2/commons-logging-1.2-javadoc.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Aditya.Molugu/Downloads/PackageForAzureLibrariesForJava/annotation-detector-3.0.4.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Aditya.Molugu/Downloads/PackageForAzureLibrariesForJava/applicationinsights-core-1.0.1.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Aditya.Molugu/Downloads/PackageForAzureLibrariesForJava/applicationinsights-web-1.0.1.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Aditya.Molugu/Downloads/PackageForAzureLibrariesForJava/azure-core-0.7.0.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Aditya.Molugu/Downloads/PackageForAzureLibrariesForJava/azure-management-0.7.0.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Aditya.Molugu/Downloads/PackageForAzureLibrariesForJava/azure-management-compute-0.7.0.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Aditya.Molugu/Downloads/PackageForAzureLibrariesForJava/azure-management-media-0.7.0.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Aditya.Molugu/Downloads/PackageForAzureLibrariesForJava/azure-management-network-0.7.0.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Aditya.Molugu/Downloads/PackageForAzureLibrariesForJava/azure-management-scheduler-0.7.0.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Aditya.Molugu/Downloads/PackageForAzureLibrariesForJava/azure-management-sql-0.7.0.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Aditya.Molugu/Downloads/PackageForAzureLibrariesForJava/azure-management-storage-0.7.0.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Aditya.Molugu/Downloads/PackageForAzureLibrariesForJava/azure-management-websites-0.7.0.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Aditya.Molugu/Downloads/PackageForAzureLibrariesForJava/azure-media-0.6.0.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Aditya.Molugu/Downloads/PackageForAzureLibrariesForJava/azure-servicebus-0.7.0.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Aditya.Molugu/Downloads/PackageForAzureLibrariesForJava/azure-serviceruntime-0.6.0.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Aditya.Molugu/Downloads/PackageForAzureLibrariesForJava/azure-storage-2.2.0.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Aditya.Molugu/Downloads/PackageForAzureLibrariesForJava/azure-tracing-util-0.6.0.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Aditya.Molugu/Downloads/PackageForAzureLibrariesForJava/commons-codec-1.6.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Aditya.Molugu/Downloads/PackageForAzureLibrariesForJava/commons-io-2.4.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Aditya.Molugu/Downloads/PackageForAzureLibrariesForJava/commons-lang3-3.3.2.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Aditya.Molugu/Downloads/PackageForAzureLibrariesForJava/commons-logging-1.1.3.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Aditya.Molugu/Downloads/PackageForAzureLibrariesForJava/gson-1.7.2.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Aditya.Molugu/Downloads/PackageForAzureLibrariesForJava/guava-18.0.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Aditya.Molugu/Downloads/PackageForAzureLibrariesForJava/jackson-core-2.2.3.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Aditya.Molugu/Downloads/PackageForAzureLibrariesForJava/jackson-core-asl-1.9.2.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Aditya.Molugu/Downloads/PackageForAzureLibrariesForJava/jackson-jaxrs-1.9.2.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Aditya.Molugu/Downloads/PackageForAzureLibrariesForJava/jackson-mapper-asl-1.9.2.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Aditya.Molugu/Downloads/PackageForAzureLibrariesForJava/jackson-xc-1.9.2.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Aditya.Molugu/Downloads/PackageForAzureLibrariesForJava/javax.inject-1.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Aditya.Molugu/Downloads/PackageForAzureLibrariesForJava/jaxb-impl-2.2.3-1.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Aditya.Molugu/Downloads/PackageForAzureLibrariesForJava/jaxb-impl-2.2.3-1-sources.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Aditya.Molugu/Downloads/PackageForAzureLibrariesForJava/jersey-client-1.13.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Aditya.Molugu/Downloads/PackageForAzureLibrariesForJava/jersey-client-1.13-sources.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Aditya.Molugu/Downloads/PackageForAzureLibrariesForJava/jersey-core-1.13.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Aditya.Molugu/Downloads/PackageForAzureLibrariesForJava/jersey-core-1.13-sources.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Aditya.Molugu/Downloads/PackageForAzureLibrariesForJava/jersey-json-1.13.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Aditya.Molugu/Downloads/PackageForAzureLibrariesForJava/jersey-json-1.13-sources.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Aditya.Molugu/Downloads/PackageForAzureLibrariesForJava/jettison-1.1.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Aditya.Molugu/Downloads/PackageForAzureLibrariesForJava/jsr305-1.3.9.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Aditya.Molugu/Downloads/PackageForAzureLibrariesForJava/mail-1.4.5.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Aditya.Molugu/Downloads/PackageForAzureLibrariesForJava/mail-1.4.5-sources.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Aditya.Molugu/Downloads/httpmime-4.5.1.jar"/>
-	<classpathentry kind="output" path="bin"/>
+	<classpathentry including="**/*.java" kind="src" output="target/classes" path="src">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="output" path="target/classes"/>
 </classpath>
