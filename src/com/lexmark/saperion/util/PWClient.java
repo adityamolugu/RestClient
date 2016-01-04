@@ -1,3 +1,4 @@
+package com.lexmark.saperion.util;
 /*//package com.kofax.client;
 
 import java.io.BufferedReader;

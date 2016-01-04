@@ -1,7 +1,7 @@
 /**
  * 
  */
-package dataobject;
+package com.lexmark.saperion.dataobjects;
 
 import java.util.Map;
 
