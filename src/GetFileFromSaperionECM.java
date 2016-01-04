@@ -23,17 +23,19 @@ import org.apache.http.impl.client.DefaultHttpClient;
 public class GetFileFromSaperionECM {
 
 	public static void main(String[] args) throws ClientProtocolException, IOException {
-		getFileFromECM();
+		String objectId = "ew0KICAiZGRjTmFtZSIgOiAiRERDX2luZGlhMDEiLA0KICAic3lzUm93SWQiIDogIjcyOUE2QUFCNzlEODEyNDM4NEQyRTM1RjRGMUI2QUE2MDAwMDAwMDAwMDAwIg0KfQ%3D%3D";
+		getFileFromECM(objectId);
 	}
 
 	/**
 	 * @throws IOException
 	 * @throws ClientProtocolException
 	 */
-	private static void getFileFromECM() throws IOException, ClientProtocolException {
+	private static void getFileFromECM(String objectId) throws IOException, ClientProtocolException {
 		// TODO need to add the URL to this method to get the file
 		// URL will contain the Object ID of the file
-		HttpResponse response = getResponseFromECMService();
+		//TODO with object ID we also need to pass the file location where this need to get stored
+		HttpResponse response = getResponseFromECMService(objectId);
 		// Building the contents from HttpResponse
 		StringBuilder content = buildResponseContent(response);
 		String boundaryValue = getBoundaryValue(response);
@@ -107,13 +109,14 @@ public class GetFileFromSaperionECM {
 	 * @throws IOException
 	 * @throws ClientProtocolException
 	 */
-	private static HttpResponse getResponseFromECMService() throws IOException, ClientProtocolException {
+	private static HttpResponse getResponseFromECMService(String objectId) throws IOException, ClientProtocolException {
 		String userName = "amolugu";
 		String password = "ecm";
 		@SuppressWarnings("resource")
 		HttpClient client = new DefaultHttpClient();
 		HttpGet request = new HttpGet(
-				"https://ecm-service.psft.co/ecms/documents/ew0KICAiZGRjTmFtZSIgOiAiRERDX2luZGlhMDEiLA0KICAic3lzUm93SWQiIDogIkZENTVDMEZFQUY4Q0NGNDI4MjhFODIzRjhCMzhBQTlCMDAwMDAwMDAwMDAwIg0KfQ%3D%3D"); // new
+				"https://ecm-service.psft.co/ecms/documents/"+objectId); // new
+		//ew0KICAiZGRjTmFtZSIgOiAiRERDX2luZGlhMDEiLA0KICAic3lzUm93SWQiIDogIkZENTVDMEZFQUY4Q0NGNDI4MjhFODIzRjhCMzhBQTlCMDAwMDAwMDAwMDAwIg0KfQ%3D%3D
 		// https://ecm-service.psft.co/ecms/documents/ew0KICAiZGRjTmFtZSIgOiAiRERDX2luZGlhMDEiLA0KICAic3lzUm93SWQiIDogIkZENTVDMEZFQUY4Q0NGNDI4MjhFODIzRjhCMzhBQTlCMDAwMDAwMDAwMDAwIg0KfQ%3D%3D
 		// https://ecm-service.psft.co/ecms/documents/ew0KICAiZGRjTmFtZSIgOiAiRERDX2luZGlhMDEiLA0KICAic3lzUm93SWQiIDogIkMxREZBREY1NzUxMEYwNDQ4OTVBMzg0Nzg1RjA1NEYwMDAwMDAwMDAwMDAwIg0KfQ%253D%253D
 		String authString = userName + ":" + password;
@@ -135,7 +138,7 @@ public class GetFileFromSaperionECM {
 	public static void decodedBase64(String ecodedString) {
 		byte[] data = Base64.decodeBase64(ecodedString);
 		// TODO add the file where the image needs to be copied too
-		try (OutputStream stream = new FileOutputStream("C:/Users/Aditya.Molugu/Desktop/abc.PNG")) {
+		try (OutputStream stream = new FileOutputStream("C:/Users/Aditya/Desktop/abc.PNG")) {
 			stream.write(data);
 		} catch (FileNotFoundException e) {
 			System.err.println("File location not found for the file to be written");

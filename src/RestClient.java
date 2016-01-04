@@ -16,7 +16,7 @@ import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.DefaultHttpClient;
 
-import com.microsoft.azure.storage.file.FileInputStream;
+//import com.microsoft.azure.storage.file.FileInputStream;
 
 @SuppressWarnings("deprecation")
 public class RestClient {
