@@ -41,6 +41,8 @@ import com.google.gson.JsonParser;
 import com.lexmark.saperion.dataobjects.ArchiveReference;
 import com.lexmark.saperion.dataobjects.Children;
 import com.lexmark.saperion.dataobjects.Content;
+import com.lexmark.saperion.dataobjects.FileDetails;
+import com.lexmark.saperion.dataobjects.FileMetadata;
 import com.lexmark.saperion.dataobjects.Properties;
 import com.lexmark.saperion.dataobjects.Request;
 import com.lexmark.saperion.dataobjects.Response;
@@ -61,15 +63,18 @@ public class PutFileToSaperionECM {
 			String fileName = "test.png";
 			//String response = getObjectId(base64FileString,fileName);
 			
-			Map fileMetadata = new HashMap<String,String>();
+			List<FileDetails> fileDetailsList = new ArrayList<FileDetails>();
+			FileDetails fileDetails = new FileDetails();
+			fileDetails.setFileName(fileName);
+			fileDetails.setFileContent(base64FileString);
 			
-			fileMetadata.put(fileName,base64FileString);
+			fileDetailsList.add(fileDetails);
 			
-			List<String> objectIds = getObjectIds(fileMetadata);
+			List<FileMetadata> objectIds = getObjectIds(fileDetailsList);
 			
-			for(String objectId : objectIds)
+			for(FileMetadata objectId : objectIds)
 			{
-				System.err.println("Object ID is ***************"+objectId);
+				System.err.println("Object ID is :"+objectId.getobjectId());
 			}
 				
 	}
@@ -228,16 +233,34 @@ public class PutFileToSaperionECM {
 	}
 	
 	
-	public static List getObjectIds(Map<String,String> fileMetadata)
+	public static List getObjectIds(List<FileDetails> fileDetails)
 	{
-		List objectIdList = new ArrayList<String>();
+		List<FileMetadata> objectIdList = new ArrayList<FileMetadata>();
 		
-		Iterator fileStringIterator = fileMetadata.keySet().iterator();
+		//Iterator fileStringIterator = fileMetadata.keySet().iterator();
 		
 		String base64File = "";
 		String fileName = "";
 		String response = "";
-		while(fileStringIterator.hasNext())
+		FileMetadata fileMetadata; 
+		for(FileDetails details : fileDetails)
+		{
+			fileName = details.getFileName();
+			base64File = details.getFileContent();
+			
+			response = getObjectId(base64File,fileName);
+			
+			fileMetadata = new FileMetadata();
+			fileMetadata.setFileName(fileName);
+			fileMetadata.setobjectId(response);
+			objectIdList.add(fileMetadata);
+			
+			base64File = "";
+			fileName = "";
+			response = "";
+			fileMetadata = null;
+		}
+		/*while(fileStringIterator.hasNext())
 		{
 			fileName = fileStringIterator.next().toString();
 			System.err.println("BASE64 FILE STRING IS ******"+fileName);
@@ -249,7 +272,7 @@ public class PutFileToSaperionECM {
 			base64File = "";
 			fileName = "";
 			response = "";
-		}
+		}*/
 		
 		return objectIdList;
 	}

@@ -10,7 +10,7 @@ package com.lexmark.saperion.dataobjects;
 public class FileMetadata {
 	
 	String fileName;
-	String base64FileContent;
+	String objectId;
 	/**
 	 * @return the fileName
 	 */
@@ -26,14 +26,14 @@ public class FileMetadata {
 	/**
 	 * @return the base64FileContent
 	 */
-	public String getBase64FileContent() {
-		return base64FileContent;
+	public String getobjectId() {
+		return objectId;
 	}
 	/**
 	 * @param base64FileContent the base64FileContent to set
 	 */
-	public void setBase64FileContent(String base64FileContent) {
-		this.base64FileContent = base64FileContent;
+	public void setobjectId(String objectId) {
+		this.objectId = objectId;
 	}
 	
 	
